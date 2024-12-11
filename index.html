@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>¡Feliz Navidad!</title>
+        <!-- Linkeo el html con el css, no me dejaba hacerlo con la ruta relativa, tuve que hacerlo con la ruta absoluta de mi ordenador. IMPRESCINDIBLE CAMBIARLO SI EL ARCHIVO SE MUEVE DE UBICACIÓN U ORDENADOR A LA NUEVA DIRECCIÓN. -->
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <!-- h1 para el título de la página, el cual crece, se espacia y cambia de color con la animación -->
+        <h1>¡FELIZ NAVIDAD!</h1>
+        <!-- un <div> para contener los 3 siguientes <div> y asignarles propiedades generales. -->
+        <div class="contenedor">
+            <!-- Este <div> contiene la imagen de los regalos que se encuentran en la parte izquierda de la pantalla, están divididos en divs para facilitar la alineación horizontal y darles un efecto de reflejo en pantalla. -->
+            <div class="regalosizq">
+                <!-- Las imágenes también tienen ruta absoluta porque no me leía la ruta relativa. IMPRESCINDIBLE CAMBIARLO SI EL ARCHIVO SE MUEVE DE UBICACIÓN U ORDENADOR A LA NUEVA DIRECCIÓN. -->
+                <img src="/imagenes/regalosizq.png" alt="Regalos">
+            </div>
+            <!-- Este <div> contiene la imagen del arbol que se encuentra en la parte central de la pantalla. -->
+            <div class="arboldenavidad">
+                <img src="/imagenes/arboldenavidad.png" alt="Arbol de navidad">
+            </div>
+            <!-- Este <div> contiene la imagen de los regalos que se encuentran en la parte derecha de la pantalla. -->
+            <div class="regalosdrch">
+                <img src="/imagenes/regalosdrch.png" alt="Regalos">
+            </div>
+        </div>
+        <!-- Este <p> que contiene un enlace, es el texto que no para de moverse por pantalla, si lo clickas te lleva a un gif de un gato navideño que baila. -->
+        <p><a href="https://cdn.dribbble.com/users/90216/screenshots/5705543/media/573c8af23c666f06f57e3c0643b48565.gif">¡Pásalo muy bien en estas fiestas!<br>¡Pinchame!</a></p>
+    </body>
+</html>

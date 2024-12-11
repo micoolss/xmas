@@ -1,0 +1,77 @@
+/* En el body pongo el color del fondo de la página y la fuente. */
+body {
+    background: #133a09;
+    font-family: 'Brush Script MT', cursive;
+}
+/* Esta etiqueta de contenedor es la que contiene a todos los demás divs, centro todos los divs para que no se vayan al lado de la página. */
+.contenedor {
+    text-align: center;
+}
+/* En todos los contenedores pongo un tamaño máximo, y pongo el "display: inline-block" para que los 3 contenedores estén alineados horizontalmente y no uno encima del otro, junto al fit-content, margin-left/-right auto para que se centren con la página. */
+.arboldenavidad {
+    width: 605px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+/* En las imagenes del arbol de navidad y de los regalos, pongo el "-webkit-box-reflect" para hacer una reflección de la imagen y darle el efecto de agua/espejo, "below" para que la reflección esté debajo de la imagen, "-85px" para la distancia entre la reflección y la imagen, "linear-gradient" para que la reflección se vaya deshaciendo según se aleje de la imagen, y dentro el porcentaje de gradiante. */
+.arboldenavidad img {
+    width: 600px;
+    -webkit-box-reflect: below -125px linear-gradient(transparent 20%,#22232e20);
+}
+.regalosizq {
+    display: inline-block;
+}
+.regalosizq img {
+    width: 300px;
+    -webkit-box-reflect: below -85px linear-gradient(transparent 20%,#22232e20);
+}
+.regalosdrch {
+    display: inline-block;
+}
+.regalosdrch img {
+    width: 300px;
+    -webkit-box-reflect: below -85px linear-gradient(transparent 20%,#22232e20);
+}
+/* En el h1 le asigno un color nieve para ambientar con la navidad, un text-align: center para centrar el texto y un nombre, duración, repetición y tipo de animación. */
+h1 {
+    color: snow;
+    text-align: center;
+    animation-name: h1color;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+/* El @ significa que se está refiriendo a la animación, debes poner el nombre de la animación sino, no se aplicará. Con los porcentajes lo que hago es asignarles un tiempo a los efectos dentro del tiempo establecido previamente, incluyendo en los efectos cambios de color, un efecto de espaciado de letras y un aumento de fuente. */
+@keyframes h1color {
+    0% {color: snow; letter-spacing: 0px; font-size: 150%;}
+    25% {color: gold;}
+    50% {color: red;}
+    75% {color: blue; letter-spacing: 10px; font-size: 200%;}
+
+}
+/* En el texto que se está moviendo por la pantalla constantemente, le establezco un color, y un nombre, duración, repetición y tipo de animación. Y también le establezco una posición fuera del campo de visión del usuario, para que aparezca de sorpresa. */
+p {
+    color: snow;
+    animation-name: pvoladora;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+    left:835px;
+    top:-800px;
+}
+/* En el enlace pulsable del texto que se está moviendo por la pantalla constantemente, le pongo el color del texto que quería porque lo sustituía por uno morado una vez clickabas el enlace y recargabas la página, también quito las decoraciones del texto para que no se subraye. */
+a {
+    color: snow;
+    text-decoration: none;
+}
+/* En la animación del texto volador, establezco los tiempos para cada posición a la que se va a mover. */
+@keyframes pvoladora {
+    0% {left:835px; top:-800px;}
+    20% {left:800px; top:0px;}
+    40% {left:0px; top:-600px;}
+    60% {left:1650px; top: -600px;}
+    80% {left:800px; top:0px;}
+}
